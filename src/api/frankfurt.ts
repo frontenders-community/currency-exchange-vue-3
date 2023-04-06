@@ -1,1 +1,1 @@
-export const API_URL = "http://api.frankfurter.app";
+export const API_URL = "https://api.frankfurter.app";
