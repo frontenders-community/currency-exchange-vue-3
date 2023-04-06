@@ -121,7 +121,7 @@ async function onUpdateCurrency(origin: string, event: UploadCurrencyEvent) {
   } else {
     state.toCurrency = event.payload;
     const data = await getConversion(amount, fromCurrency, event.payload);
-    if (data !== null) {
+    if (data !== undefined) {
       state.convertedAmount = Number(data.toFixed(2));
       getTimeserie();
     }

@@ -34,7 +34,7 @@ function updateAmount(event: any) {
         :value="item"
         :selected="item === selectedCurrency"
       >
-        ({{ item }}) {{ currencies[item] }}
+        ({{ item }}) {{ currencies[item as keyof Object] }}
       </option>
     </select>
     <input
