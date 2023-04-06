@@ -36,7 +36,7 @@ async function getTimeserie() {
     startDate.setMonth(endDate.getMonth() - 1);
     const startDateString = startDate.toISOString().slice(0, 10);
 
-    const response = await fetch(`${API_URL}/${startDateString}..${endDateString}?to=${state.toCurrency}`);
+    const response = await fetch(`${API_URL}/${startDateString}..${endDateString}?base=${state.fromCurrency}&to=${state.toCurrency}`);
     if (response.ok) {
       const result = await response.json();
       const labels = Object.keys(result.rates);
@@ -116,6 +116,7 @@ async function onUpdateCurrency(origin: string, event: UploadCurrencyEvent) {
     const data = await getConversion(amount, event.payload, toCurrency);
     if (data) {
       state.convertedAmount = Number(data.toFixed(2));
+      getTimeserie();
     }
   } else {
     state.toCurrency = event.payload;

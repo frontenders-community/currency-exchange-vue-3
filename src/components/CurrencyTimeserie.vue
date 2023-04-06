@@ -42,29 +42,7 @@ const options = {
       type: 'number',
       easing: 'linear',
       duration: delayBetweenPoints,
-      from: NaN, // the point is initially skipped
-      delay(ctx: any) {
-        if (ctx.type !== 'data' || ctx.xStarted) {
-          return 0;
-        }
-        ctx.xStarted = true;
-        return ctx.index * delayBetweenPoints;
-      }
-    },/*
-    y: {
-      type: 'number',
-      easing: 'linear',
-      duration: delayBetweenPoints,
-      
-      from: previousY,
-      delay(ctx: any) {
-        if (ctx.type !== 'data' || ctx.yStarted) {
-          return 0;
-        }
-        ctx.yStarted = true;
-        return ctx.index * delayBetweenPoints;
-      }
-    }*/
+    },
   },
   scales: {
     x: {
