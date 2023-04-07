@@ -87,4 +87,9 @@ input:focus, input:active {
   outline: none;
   border-bottom: 1px solid var(--white);
 }
+@media screen and (max-width: 768px) {
+  select {
+    margin: 20px 0;
+  }
+}
 </style>
