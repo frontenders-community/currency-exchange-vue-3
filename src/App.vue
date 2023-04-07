@@ -211,7 +211,7 @@ async function onUpdateAmount(origin: string, event: UploadAmountEvent) {
   border-bottom-right-radius: var(--border-radius);
 }
 
-@media (width <= 425px) {
+@media (width <= 768px) {
   .converter-from {
     border-bottom-left-radius: 0;
   }
