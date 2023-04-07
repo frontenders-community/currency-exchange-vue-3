@@ -210,43 +210,13 @@ async function onUpdateAmount(origin: string, event: UploadAmountEvent) {
   background-color: var(--grey-dark);
   border-bottom-right-radius: var(--border-radius);
 }
-/*
-h1 {
-  font-size: 4rem;
-  margin-bottom: 20px;
-}
-.info h3 {
-  font-weight: 300;
-  font-size: 1.6rem;
-}
-.info h2 {
-  font-weight: 700;
-  font-size: 3rem;
-}
-.info {
-  margin-bottom: 20px;
-}
-#app {
-  padding: 1rem 0;
-}
-.app-container {
-  display: flex;
-  flex-direction: column;
-  margin-top: 20px;
-}
-.currency-converter {
-  width: 50%;
-  height: 200px;
-  margin-bottom: 20px;
-}
-.currency-timelines {
-  text-align: center;
-  width: 100%;
-  height: 300px;
-}
-@media (width <= 768px) {
-  .currency-converter {
-    width: 100%;
+
+@media (width <= 425px) {
+  .converter-from {
+    border-bottom-left-radius: 0;
   }
-}*/
+  .converter-to {
+    border-bottom-right-radius: 0;
+  }
+}
 </style>

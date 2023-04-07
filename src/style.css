@@ -37,3 +37,22 @@ body {
   border: 1px solid var(--white);
   border-radius: var(--border-radius);
 }
+
+@media (width <= 425px) {
+  body {
+    width: 100%;
+    height: 100vh;
+    padding: 0;
+  }
+
+  #app {
+    grid-template-columns: 1fr;
+    grid-template-rows: 150px 1fr 1fr 1fr;
+    grid-template-areas:
+      "header"
+      "chart"
+      "converter-from"
+      "converter-to";
+    border: 0;
+  }
+}
